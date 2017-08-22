@@ -2,26 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cuid from 'cuid';
 
+import ListHeader from './ListHeader';
+import ListFooter from './ListFooter';
+
 const List = ({ page, records, orderBy }) => (
-  <div>
-    {page &&
-      <div>
-        <div>Total: {page.total}</div>
-        <div>Pages: {page.pages}</div>
-        <div>Limit: {page.limit}</div>
-        <div>Current: {page.current}</div>
-      </div>
-    }
-
-    {orderBy && orderBy.key && (
-      <div>{`Order by ${orderBy.key}, ${orderBy.dir}`}</div>
-    )}
-
-    {records && records.map(({ name }) => (
-      <div key={cuid()}>{ name }</div>
-    ))}
+  <div id="list">
+    <ListHeader sortedBy={orderBy && orderBy.key} dir={orderBy && orderBy.dir} />
+    <div className="main">
+      {records && records.map(({ name }) => (
+        <div key={cuid()}>{ name }</div>
+      ))}
+    </div>
+    <ListFooter
+      total={page && page.total}
+      pages={page && page.pages}
+      limit={page && page.limit}
+      currentPage={page && page.current}
+    />
   </div>
-
 );
 
 List.propTypes = {
