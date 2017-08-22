@@ -1,18 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import cuid from 'cuid';
 
 import ListHeader from './ListHeader';
 import ListFooter from './ListFooter';
+import ListContent from './ListContent';
 
 const List = ({ page, records, orderBy }) => (
   <div id="list">
     <ListHeader sortedBy={orderBy && orderBy.key} dir={orderBy && orderBy.dir} />
-    <div className="main">
-      {records && records.map(({ name }) => (
-        <div key={cuid()}>{ name }</div>
-      ))}
-    </div>
+    <ListContent records={records} />
     <ListFooter
       total={page && page.total}
       pages={page && page.pages}
