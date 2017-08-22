@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
-import ListContainer from './containers/ListContainer'
+import React from 'react';
+import ListContainer from './containers/ListContainer';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <ListContainer />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="App">
+    <ListContainer />
+  </div>
+);
 
 export default App;

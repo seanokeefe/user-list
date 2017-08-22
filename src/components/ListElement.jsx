@@ -32,7 +32,7 @@ ListElement.propTypes = {
   address: PropTypes.shape({
     street: PropTypes.string,
     city: PropTypes.string,
-    zip: PropTypes.sting,
+    zip: PropTypes.string,
     country: PropTypes.string,
   }),
   balance: PropTypes.number,

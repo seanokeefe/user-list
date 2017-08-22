@@ -7,18 +7,30 @@ class ListContainer extends Component {
     super();
     this.state = {
       recordsObj: {},
-      restURL: 'https://appthis-code-challenge-api.herokuapp.com/people?orderBy.key=name&orderBy.dir=asc&page.limit=25',
+      restURL: 'https://appthis-code-challenge-api.herokuapp.com/people',
+      orderKey: 'name',
+      orderDirection: 'asc',
+      recordsPerPage: '25',
+      currentPage: '1',
       errorMsg: '',
     };
+
+    this.handleSortChange = this.handleSortChange.bind(this);
+    this.getRecords = this.getRecords.bind(this);
   }
 
   componentDidMount() {
     this.getRecords();
   }
 
+
   // getRecords() produces a side-effect of setting recordsObj state
-  getRecords() {
-    fetch(this.state.restURL)
+  getRecords(orderKey = this.state.orderKey,
+    orderDirection = this.state.orderDirection,
+    recordsPerPage = this.state.recordsPerPage,
+    currentPage = this.state.currentPage,
+  ) {
+    fetch(`${this.state.restURL}?orderBy.key=${orderKey}&orderBy.dir=${orderDirection}&page.limit=${recordsPerPage}&page.current=${currentPage}`)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -35,11 +47,21 @@ class ListContainer extends Component {
       });
   }
 
+  handleSortChange(event) {
+    this.setState({ [event.target.name]: event.target.value });
+    this.getRecords(event.target.value);
+  }
+
   render() {
     const { page, records, orderBy } = this.state.recordsObj;
 
     return (
-      <List page={page} records={records} orderBy={orderBy} />
+      <List
+        page={page}
+        records={records}
+        orderBy={orderBy}
+        handleSortChange={this.handleSortChange}
+      />
     );
   }
 }

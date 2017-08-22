@@ -1,0 +1,294 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`checks List default render 1`] = `
+<div
+  id="list"
+>
+  <div
+    className="header"
+  >
+    <h1>
+      User Records
+    </h1>
+    <div
+      className="sort"
+    >
+      <span>
+        Sort By:
+      </span>
+      <select
+        name="orderKey"
+        onChange={undefined}
+        value={undefined}
+      >
+        <option
+          value="name"
+        >
+          name
+        </option>
+        <option
+          value="balance"
+        >
+           balance
+        </option>
+        <option
+          value="city"
+        >
+          city
+        </option>
+        <option
+          value="country"
+        >
+          country
+        </option>
+      </select>
+      undefined
+    </div>
+  </div>
+  <div
+    className="main"
+  />
+  <div
+    className="footer"
+  >
+    <div>
+      <div>
+        Total: 
+      </div>
+      <div>
+        Pages: 
+      </div>
+      <div>
+        Limit: 
+      </div>
+      <div>
+        Current: 
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`checks ListContainer default render 1`] = `
+<div
+  id="list"
+>
+  <div
+    className="header"
+  >
+    <h1>
+      User Records
+    </h1>
+    <div
+      className="sort"
+    >
+      <span>
+        Sort By:
+      </span>
+      <select
+        name="orderKey"
+        onChange={[Function]}
+        value={undefined}
+      >
+        <option
+          value="name"
+        >
+          name
+        </option>
+        <option
+          value="balance"
+        >
+           balance
+        </option>
+        <option
+          value="city"
+        >
+          city
+        </option>
+        <option
+          value="country"
+        >
+          country
+        </option>
+      </select>
+      undefined
+    </div>
+  </div>
+  <div
+    className="main"
+  />
+  <div
+    className="footer"
+  >
+    <div>
+      <div>
+        Total: 
+      </div>
+      <div>
+        Pages: 
+      </div>
+      <div>
+        Limit: 
+      </div>
+      <div>
+        Current: 
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`checks ListContent default render 1`] = `
+<div
+  className="main"
+/>
+`;
+
+exports[`checks ListElement default render 1`] = `
+<div
+  className="list-item"
+>
+  <img
+    alt="avatar of "
+    className="list-item__avatar"
+    src=""
+  />
+  <div
+    className="list-item__lockup"
+  >
+    <div
+      className="list-item__name"
+    >
+      
+    </div>
+    <div
+      className="list-item__address"
+    >
+      
+       
+      <br />
+      ,  
+       
+      <br />
+    </div>
+  </div>
+  <div
+    className="list-item__balance"
+  >
+    <h4>
+      Balance: 
+      <span>
+        0
+      </span>
+    </h4>
+  </div>
+  <div
+    className="list-item__created"
+  >
+    record created: 
+    
+  </div>
+</div>
+`;
+
+exports[`checks ListFooter default render 1`] = `
+<div
+  className="footer"
+>
+  <div>
+    <div>
+      Total: 
+    </div>
+    <div>
+      Pages: 
+    </div>
+    <div>
+      Limit: 
+    </div>
+    <div>
+      Current: 
+    </div>
+  </div>
+</div>
+`;
+
+exports[`checks ListHeader default render 1`] = `
+<div
+  className="header"
+>
+  <h1>
+    User Records
+  </h1>
+  <div
+    className="sort"
+  >
+    <span>
+      Sort By:
+    </span>
+    <select
+      name="orderKey"
+      onChange={undefined}
+      value={undefined}
+    >
+      <option
+        value="name"
+      >
+        name
+      </option>
+      <option
+        value="balance"
+      >
+         balance
+      </option>
+      <option
+        value="city"
+      >
+        city
+      </option>
+      <option
+        value="country"
+      >
+        country
+      </option>
+    </select>
+    undefined
+  </div>
+</div>
+`;
+
+exports[`checks SortSelect default render 1`] = `
+<div
+  className="sort"
+>
+  <span>
+    Sort By:
+  </span>
+  <select
+    name="orderKey"
+    onChange={undefined}
+    value={undefined}
+  >
+    <option
+      value="name"
+    >
+      name
+    </option>
+    <option
+      value="balance"
+    >
+       balance
+    </option>
+    <option
+      value="city"
+    >
+      city
+    </option>
+    <option
+      value="country"
+    >
+      country
+    </option>
+  </select>
+  undefined
+</div>
+`;
