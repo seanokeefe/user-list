@@ -1,0 +1,22 @@
+{
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+
+  "env": {
+    "browser": true,
+    "node": true
+  },
+
+  "plugins": [
+      "react"
+  ],
+
+  "extends": "airbnb",
+
+  "rules": {
+    "react/require-default-props": 0
+  }
+}
