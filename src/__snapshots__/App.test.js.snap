@@ -36,12 +36,12 @@ exports[`checks List default render 1`] = `
            balance
         </option>
         <option
-          value="city"
+          value="address.city"
         >
           city
         </option>
         <option
-          value="country"
+          value="address.country"
         >
           country
         </option>
@@ -54,7 +54,7 @@ exports[`checks List default render 1`] = `
         >
           <span
             aria-hidden={true}
-            className="fa fa-caret-square-o-up sort-icons"
+            className="fa fa-caret-up sort-icons"
           />
         </button>
         <button
@@ -64,7 +64,7 @@ exports[`checks List default render 1`] = `
         >
           <span
             aria-hidden={true}
-            className="fa fa-caret-square-o-down sort-icons"
+            className="fa fa-caret-down sort-icons"
           />
         </button>
       </div>
@@ -76,18 +76,70 @@ exports[`checks List default render 1`] = `
   <div
     className="footer"
   >
-    <div>
+    <div
+      className="pagination"
+    >
+      <button
+        disabled={false}
+        name="currentPage"
+        onClick={undefined}
+        value={NaN}
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-caret-left pager-icons"
+        />
+      </button>
+      <select
+        className="page-select"
+        name="currentPage"
+        onChange={undefined}
+        value={undefined}
+      />
+      <button
+        disabled={true}
+        name="currentPage"
+        onClick={undefined}
+        value={NaN}
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-caret-right pager-icons"
+        />
+      </button>
+    </div>
+    <div
+      className="records-control"
+    >
+      <select
+        className="limit-select"
+        name="recordsPerPage"
+        onChange={undefined}
+        value={undefined}
+      >
+        <option
+          value="5"
+        >
+          5
+        </option>
+        <option
+          value="10"
+        >
+          10
+        </option>
+        <option
+          value="25"
+        >
+          20
+        </option>
+        <option
+          value="50"
+        >
+          50
+        </option>
+      </select>
       <div>
-        Total: 
-      </div>
-      <div>
-        Pages: 
-      </div>
-      <div>
-        Limit: 
-      </div>
-      <div>
-        Current: 
+        records per page of undefined total
       </div>
     </div>
   </div>
@@ -130,12 +182,12 @@ exports[`checks ListContainer default render 1`] = `
            balance
         </option>
         <option
-          value="city"
+          value="address.city"
         >
           city
         </option>
         <option
-          value="country"
+          value="address.country"
         >
           country
         </option>
@@ -148,7 +200,7 @@ exports[`checks ListContainer default render 1`] = `
         >
           <span
             aria-hidden={true}
-            className="fa fa-caret-square-o-up sort-icons"
+            className="fa fa-caret-up sort-icons"
           />
         </button>
         <button
@@ -158,7 +210,7 @@ exports[`checks ListContainer default render 1`] = `
         >
           <span
             aria-hidden={true}
-            className="fa fa-caret-square-o-down sort-icons"
+            className="fa fa-caret-down sort-icons"
           />
         </button>
       </div>
@@ -170,18 +222,70 @@ exports[`checks ListContainer default render 1`] = `
   <div
     className="footer"
   >
-    <div>
+    <div
+      className="pagination"
+    >
+      <button
+        disabled={false}
+        name="currentPage"
+        onClick={[Function]}
+        value={NaN}
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-caret-left pager-icons"
+        />
+      </button>
+      <select
+        className="page-select"
+        name="currentPage"
+        onChange={[Function]}
+        value={undefined}
+      />
+      <button
+        disabled={true}
+        name="currentPage"
+        onClick={[Function]}
+        value={NaN}
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-caret-right pager-icons"
+        />
+      </button>
+    </div>
+    <div
+      className="records-control"
+    >
+      <select
+        className="limit-select"
+        name="recordsPerPage"
+        onChange={[Function]}
+        value={undefined}
+      >
+        <option
+          value="5"
+        >
+          5
+        </option>
+        <option
+          value="10"
+        >
+          10
+        </option>
+        <option
+          value="25"
+        >
+          20
+        </option>
+        <option
+          value="50"
+        >
+          50
+        </option>
+      </select>
       <div>
-        Total: 
-      </div>
-      <div>
-        Pages: 
-      </div>
-      <div>
-        Limit: 
-      </div>
-      <div>
-        Current: 
+        records per page of undefined total
       </div>
     </div>
   </div>
@@ -245,18 +349,70 @@ exports[`checks ListFooter default render 1`] = `
 <div
   className="footer"
 >
-  <div>
+  <div
+    className="pagination"
+  >
+    <button
+      disabled={false}
+      name="currentPage"
+      onClick={undefined}
+      value={NaN}
+    >
+      <span
+        aria-hidden={true}
+        className="fa fa-caret-left pager-icons"
+      />
+    </button>
+    <select
+      className="page-select"
+      name="currentPage"
+      onChange={undefined}
+      value={undefined}
+    />
+    <button
+      disabled={true}
+      name="currentPage"
+      onClick={undefined}
+      value={NaN}
+    >
+      <span
+        aria-hidden={true}
+        className="fa fa-caret-right pager-icons"
+      />
+    </button>
+  </div>
+  <div
+    className="records-control"
+  >
+    <select
+      className="limit-select"
+      name="recordsPerPage"
+      onChange={undefined}
+      value={undefined}
+    >
+      <option
+        value="5"
+      >
+        5
+      </option>
+      <option
+        value="10"
+      >
+        10
+      </option>
+      <option
+        value="25"
+      >
+        20
+      </option>
+      <option
+        value="50"
+      >
+        50
+      </option>
+    </select>
     <div>
-      Total: 
-    </div>
-    <div>
-      Pages: 
-    </div>
-    <div>
-      Limit: 
-    </div>
-    <div>
-      Current: 
+      records per page of undefined total
     </div>
   </div>
 </div>
@@ -295,12 +451,12 @@ exports[`checks ListHeader default render 1`] = `
          balance
       </option>
       <option
-        value="city"
+        value="address.city"
       >
         city
       </option>
       <option
-        value="country"
+        value="address.country"
       >
         country
       </option>
@@ -313,7 +469,7 @@ exports[`checks ListHeader default render 1`] = `
       >
         <span
           aria-hidden={true}
-          className="fa fa-caret-square-o-up sort-icons"
+          className="fa fa-caret-up sort-icons"
         />
       </button>
       <button
@@ -323,7 +479,7 @@ exports[`checks ListHeader default render 1`] = `
       >
         <span
           aria-hidden={true}
-          className="fa fa-caret-square-o-down sort-icons"
+          className="fa fa-caret-down sort-icons"
         />
       </button>
     </div>
@@ -354,12 +510,12 @@ exports[`checks SortSelect default render 1`] = `
        balance
     </option>
     <option
-      value="city"
+      value="address.city"
     >
       city
     </option>
     <option
-      value="country"
+      value="address.country"
     >
       country
     </option>
@@ -372,7 +528,7 @@ exports[`checks SortSelect default render 1`] = `
     >
       <span
         aria-hidden={true}
-        className="fa fa-caret-square-o-up sort-icons"
+        className="fa fa-caret-up sort-icons"
       />
     </button>
     <button
@@ -382,7 +538,7 @@ exports[`checks SortSelect default render 1`] = `
     >
       <span
         aria-hidden={true}
-        className="fa fa-caret-square-o-down sort-icons"
+        className="fa fa-caret-down sort-icons"
       />
     </button>
   </div>

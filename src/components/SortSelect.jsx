@@ -8,12 +8,12 @@ const SortSelect = ({ sortedBy, dir, handleSortChange, handleDirChange }) => (
     <select name="orderKey" value={sortedBy} onChange={handleSortChange}>
       <option value="name" >name</option>
       <option value="balance" > balance</option>
-      <option value="city" >city</option>
-      <option value="country" >country</option>
+      <option value="address.city" >city</option>
+      <option value="address.country" >country</option>
     </select>
     <div>
-      <button name="orderDirection" value="asc" onClick={handleDirChange}><FontAwesome className={`sort-icons${dir === 'asc' ? '--active' : ''}`} name="caret-square-o-up" /></button>
-      <button name="orderDirection" value="desc" onClick={handleDirChange}><FontAwesome className={`sort-icons${dir === 'desc' ? '--active' : ''}`} name="caret-square-o-down" /></button>
+      <button name="orderDirection" value="asc" onClick={handleDirChange}><FontAwesome className={`sort-icons${dir === 'asc' ? '--active' : ''}`} name="caret-up" /></button>
+      <button name="orderDirection" value="desc" onClick={handleDirChange}><FontAwesome className={`sort-icons${dir === 'desc' ? '--active' : ''}`} name="caret-down" /></button>
     </div>
   </div>
 

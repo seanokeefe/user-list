@@ -1,14 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ListFooter = ({ total, pages, limit, currentPage }) => (
+import PageControl from './PageControl';
+import RecordsControl from './RecordsControl';
+
+const ListFooter = ({ total, pages, limit, currentPage, handleLimitChange, handlePageChange }) => (
   <div className="footer">
-    <div>
-      <div>Total: {total}</div>
-      <div>Pages: {pages}</div>
-      <div>Limit: {limit}</div>
-      <div>Current: {currentPage}</div>
-    </div>
+    <PageControl
+      limit={limit}
+      currentPage={currentPage}
+      pages={pages}
+      handlePageChange={handlePageChange}
+    />
+    <RecordsControl limit={limit} total={total} handleLimitChange={handleLimitChange} />
   </div>
 );
 
@@ -17,6 +21,8 @@ ListFooter.propTypes = {
   pages: PropTypes.number,
   limit: PropTypes.number,
   currentPage: PropTypes.number,
+  handleLimitChange: PropTypes.func,
+  handlePageChange: PropTypes.func,
 };
 
 export default ListFooter;

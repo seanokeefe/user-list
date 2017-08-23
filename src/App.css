@@ -9,15 +9,19 @@ html, body, #root, .App {
 }
 
 .header {
-  background-color: #9CAAC6;
-  flex: 0 0 5vh;
+  background-color: #9BACBA;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 0 0 6vh;
   padding: 1rem 2rem;
 }
 
 .header h1 {
   color: #ffffff;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  margin: 0;
   font-weight: 100;
 }
 
@@ -26,10 +30,10 @@ html, body, #root, .App {
 }
 
 .main {
-  background-color: #DEE7EF;
+  background-color: #cecece;
   justify-content: center;
   display: flex;
-  flex: 1 1 85vh;
+  flex: 1 1 84vh;
   flex-wrap: wrap;
   flex-direction: row;
   padding: 1rem 2rem;
@@ -37,14 +41,15 @@ html, body, #root, .App {
 }
 
 .footer {
-  background-color: #0C2C52;
-  color: #9CAAC6;
+  background-color: #15283D;
+  color: #84A5CC;
   flex: 0 0 10vh;
   padding: 1rem 2rem;
 }
 
 .footer div {
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: center;
   margin: 0 1rem;
@@ -54,33 +59,33 @@ html, body, #root, .App {
   display:flex;
   justify-content: flex-end;
   align-items: baseline;
-  border: 1px solid #0C2C52;
+  border: 1px solid #15283D;
   border-radius: 5px;
   color: #dedede;
-  padding: 0.5em 0.5rem 0.5rem 1rem;
+  padding: 0.5em 1em 0.5em 1.5em;
   font-size: 1rem;
 }
 
 .sort span {
   font-size: 0.6rem ;
   text-transform: uppercase;
-  color: #0C2C52;
-  margin-right: 0.5rem;
-  color: #0C2C52;
+  color: #15283D;
 }
 
 .sort span.sort-icons {
   font-size: 1.5rem;
   cursor: pointer;
-  padding: 0.15rem 0.3rem;
+  border: 1px solid #15283D;
+  border-radius: 5px;
+  padding: 0 0.3rem;
 }
 
 .sort span.sort-icons--active {
   font-size: 1.5rem;
-  border: 1px solid #0C2C52;
+  border: 1px solid #15283D;
   border-radius: 5px;
-  padding: 0.15rem 0.3rem;
-  box-shadow: inset 2px 2px 5px #0C2C52;
+  padding: 0 0.3rem;
+  box-shadow: inset 2px 2px 5px #15283D;
 }
 
 .sort button {
@@ -95,7 +100,7 @@ html, body, #root, .App {
   margin: 0;
 }
 
-.sort select {
+select {
   appearance: none;
   background: none;
   border: none;
@@ -103,8 +108,50 @@ html, body, #root, .App {
   font-size: 1rem;
   outline: none;
   cursor: pointer;
-  text-align: right;
-  margin-right: 1rem;
+  margin: 0 0.5em;
+}
+
+.limit-select, .page-select {
+  background-color: #2C537F;
+  color: #84A5CC;
+  padding: 0.35em;
+  font-size: 1em;
+}
+
+.footer div.pagination {
+  font-size: 1.75rem;
+}
+
+.footer div.pagination button {
+  padding: 0;
+  border: 0;
+  background: none;
+  margin: 0 0.5rem;
+  outline: none;
+}
+
+.pager-icons {
+  font-size: 2.5rem;
+  cursor: pointer;
+  border: 1px solid #2C537F;
+  color: #2C537F;
+  border-radius: 5px;
+  padding: 0 0.3em;
+}
+
+button:disabled .pager-icons {
+  color: #2C537F;
+  cursor: default;
+}
+
+.footer div.records-control {
+  align-items: center;
+  font-size: 0.75rem;
+  justify-content: flex-start;
+}
+
+.footer div.records-control div {
+  margin: 0.5rem 0;
 }
 
 .list-item {
@@ -118,11 +165,11 @@ html, body, #root, .App {
   margin: 1rem 0.5rem;
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 2px 3px 7px #9CAAC6;
+  box-shadow: 2px 3px 7px #9BACBA;
 }
 
 .list-item__avatar {
-  border-radius: 25%;
+  border-radius: 50%;
 }
 
 .list-item__lockup {
@@ -149,8 +196,8 @@ html, body, #root, .App {
   flex-grow: 1;
   justify-content: center;
   margin: 1rem auto 0.5rem;
-  border-top: 2px solid #9CAAC6;
-  border-bottom: 2px solid #9CAAC6;
+  border-top: 2px solid #9BACBA;
+  border-bottom: 2px solid #9BACBA;
   border-radius: 5px;
   background-color: #DEE7EF;
 }
@@ -162,13 +209,47 @@ html, body, #root, .App {
 }
 
 .list-item__balance h4 span{
-  color: #0C2C52;
+  color: #15283D;
 }
 
 .list-item__created {
-  color: #9CAAC6;
+  color: #9BACBA;
   font-size: 0.7rem;
   margin: 0.25rem 0;
   text-align: right;
   flex-grow: 1;
+}
+
+@media screen and (max-width: 750px) {
+  .list-item {
+    width: 90%;
+    min-width: 325px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    display: block;
+  }
+
+  .sort {
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+
+  .footer {
+    display: block;
+  }
+
+  .footer .records-control {
+    margin-top: 1.5rem;
+  }
+
+  .footer div.pagination {
+    font-size: 1rem;
+  }
+
+  .pager-icons {
+    font-size: 1.5rem;
+  }
 }

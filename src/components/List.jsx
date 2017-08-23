@@ -5,7 +5,15 @@ import ListHeader from './ListHeader';
 import ListFooter from './ListFooter';
 import ListContent from './ListContent';
 
-const List = ({ page, records, orderBy, handleSortChange, handleDirChange }) => (
+const List = ({
+  page,
+  records,
+  orderBy,
+  handleSortChange,
+  handleDirChange,
+  handleLimitChange,
+  handlePageChange,
+}) => (
   <div id="list">
     <ListHeader
       sortedBy={orderBy && orderBy.key}
@@ -19,6 +27,8 @@ const List = ({ page, records, orderBy, handleSortChange, handleDirChange }) => 
       pages={page && page.pages}
       limit={page && page.limit}
       currentPage={page && page.current}
+      handleLimitChange={handleLimitChange}
+      handlePageChange={handlePageChange}
     />
   </div>
 );
@@ -52,6 +62,8 @@ List.propTypes = {
   }),
   handleSortChange: PropTypes.func,
   handleDirChange: PropTypes.func,
+  handleLimitChange: PropTypes.func,
+  handlePageChange: PropTypes.func,
 };
 
 export default List;
