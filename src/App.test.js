@@ -55,7 +55,7 @@ test('checks ListElement default render', () => {
       avatar={''}
       address={{ street: '', city: '', zip: '', country: '' }}
       balance={0}
-      created={''}
+      created={'2082-11-19T09:44:58.655Z'}
     />,
   );
   const tree = component.toJSON();

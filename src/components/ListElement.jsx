@@ -17,10 +17,10 @@ const ListElement = ({ name, avatar, address, balance, created }) => {
         </div>
       </div>
       <div className="list-item__balance">
-        <h4>Balance: <span>{balance}</span></h4>
+        <h4>Balance: <span>{balance.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</span></h4>
       </div>
       <div className="list-item__created">
-        record created: {created}
+        record created: {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: 'numeric' }).format(Date.parse(created))}
       </div>
     </div>
   );

@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 html, body, #root, .App {
   height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
 }
 
 #list {
@@ -18,7 +24,7 @@ html, body, #root, .App {
 }
 
 .header h1 {
-  color: #ffffff;
+  color: #e6e6e6e;
   text-transform: uppercase;
   font-size: 1.75rem;
   margin: 0;
@@ -44,7 +50,7 @@ html, body, #root, .App {
   background-color: #15283D;
   color: #84A5CC;
   flex: 0 0 10vh;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
 }
 
 .footer div {
@@ -52,7 +58,6 @@ html, body, #root, .App {
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  margin: 0 1rem;
 }
 
 .sort {
@@ -104,7 +109,7 @@ select {
   appearance: none;
   background: none;
   border: none;
-  color: #ffffff;
+  color: #C6DBED;
   font-size: 1rem;
   outline: none;
   cursor: pointer;
@@ -140,7 +145,7 @@ select {
 }
 
 button:disabled .pager-icons {
-  color: #2C537F;
+  color: #15283D;
   cursor: default;
 }
 
@@ -156,7 +161,7 @@ button:disabled .pager-icons {
 
 .list-item {
   display: flex;
-  width: 325px;
+  width: 350px;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
@@ -170,6 +175,7 @@ button:disabled .pager-icons {
 
 .list-item__avatar {
   border-radius: 50%;
+  width: 20%;
 }
 
 .list-item__lockup {
