@@ -16,6 +16,7 @@ class ListContainer extends Component {
     };
 
     this.handleSortChange = this.handleSortChange.bind(this);
+    this.handleDirChange = this.handleDirChange.bind(this);
     this.getRecords = this.getRecords.bind(this);
   }
 
@@ -48,8 +49,13 @@ class ListContainer extends Component {
   }
 
   handleSortChange(event) {
-    this.setState({ [event.target.name]: event.target.value });
-    this.getRecords(event.target.value);
+    this.setState({ [event.currentTarget.name]: event.currentTarget.value });
+    this.getRecords(event.currentTarget.value);
+  }
+
+  handleDirChange(event) {
+    this.setState({ [event.currentTarget.name]: event.currentTarget.value });
+    this.getRecords(this.state.orderKey, event.currentTarget.value);
   }
 
   render() {
@@ -61,6 +67,7 @@ class ListContainer extends Component {
         records={records}
         orderBy={orderBy}
         handleSortChange={this.handleSortChange}
+        handleDirChange={this.handleDirChange}
       />
     );
   }

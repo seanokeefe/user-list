@@ -9,6 +9,10 @@ exports[`checks List default render 1`] = `
   >
     <h1>
       User Records
+      <span
+        aria-hidden={true}
+        className="fa fa-folder-open-o"
+      />
     </h1>
     <div
       className="sort"
@@ -42,7 +46,28 @@ exports[`checks List default render 1`] = `
           country
         </option>
       </select>
-      undefined
+      <div>
+        <button
+          name="orderDirection"
+          onClick={undefined}
+          value="asc"
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-caret-square-o-up sort-icons"
+          />
+        </button>
+        <button
+          name="orderDirection"
+          onClick={undefined}
+          value="desc"
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-caret-square-o-down sort-icons"
+          />
+        </button>
+      </div>
     </div>
   </div>
   <div
@@ -78,6 +103,10 @@ exports[`checks ListContainer default render 1`] = `
   >
     <h1>
       User Records
+      <span
+        aria-hidden={true}
+        className="fa fa-folder-open-o"
+      />
     </h1>
     <div
       className="sort"
@@ -111,7 +140,28 @@ exports[`checks ListContainer default render 1`] = `
           country
         </option>
       </select>
-      undefined
+      <div>
+        <button
+          name="orderDirection"
+          onClick={[Function]}
+          value="asc"
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-caret-square-o-up sort-icons"
+          />
+        </button>
+        <button
+          name="orderDirection"
+          onClick={[Function]}
+          value="desc"
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-caret-square-o-down sort-icons"
+          />
+        </button>
+      </div>
     </div>
   </div>
   <div
@@ -218,6 +268,10 @@ exports[`checks ListHeader default render 1`] = `
 >
   <h1>
     User Records
+    <span
+      aria-hidden={true}
+      className="fa fa-folder-open-o"
+    />
   </h1>
   <div
     className="sort"
@@ -251,7 +305,28 @@ exports[`checks ListHeader default render 1`] = `
         country
       </option>
     </select>
-    undefined
+    <div>
+      <button
+        name="orderDirection"
+        onClick={undefined}
+        value="asc"
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-caret-square-o-up sort-icons"
+        />
+      </button>
+      <button
+        name="orderDirection"
+        onClick={undefined}
+        value="desc"
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-caret-square-o-down sort-icons"
+        />
+      </button>
+    </div>
   </div>
 </div>
 `;
@@ -289,6 +364,27 @@ exports[`checks SortSelect default render 1`] = `
       country
     </option>
   </select>
-  undefined
+  <div>
+    <button
+      name="orderDirection"
+      onClick={undefined}
+      value="asc"
+    >
+      <span
+        aria-hidden={true}
+        className="fa fa-caret-square-o-up sort-icons"
+      />
+    </button>
+    <button
+      name="orderDirection"
+      onClick={undefined}
+      value="desc"
+    >
+      <span
+        aria-hidden={true}
+        className="fa fa-caret-square-o-down sort-icons"
+      />
+    </button>
+  </div>
 </div>
 `;
