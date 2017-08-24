@@ -6,10 +6,11 @@ import ListElement from './ListElement';
 
 const ListContent = ({ records }) => (
   <div className="main">
-    {records && records.map(({ name, avatar, address, balance, created }) => (
+    {records && records.map(({ name, email, avatar, address, balance, created }) => (
       <ListElement
         key={cuid()}
         name={name}
+        email={email}
         avatar={avatar}
         address={address}
         balance={balance}

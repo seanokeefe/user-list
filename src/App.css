@@ -191,6 +191,13 @@ button:disabled .pager-icons {
   margin: 0.5rem 1rem 0.25rem;
 }
 
+.list-item__email {
+  flex-grow: 1;
+  font-weight: 600;
+  font-size: 0.75rem;
+  margin: 0 1rem 0.25rem;
+}
+
 .list-item__address {
   margin: 0.25rem 1rem;
   color: #336699;

@@ -316,6 +316,9 @@ exports[`checks ListElement default render 1`] = `
       
     </div>
     <div
+      className="list-item__email"
+    />
+    <div
       className="list-item__address"
     >
       

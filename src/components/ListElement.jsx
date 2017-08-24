@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ListElement = ({ name, avatar, address, balance, created }) => {
+const ListElement = ({ name, email, avatar, address, balance, created }) => {
   const { street, city, zip, country } = address;
 
   return (
@@ -10,6 +10,9 @@ const ListElement = ({ name, avatar, address, balance, created }) => {
       <div className="list-item__lockup">
         <div className="list-item__name">
           {name}
+        </div>
+        <div className="list-item__email">
+          {email}
         </div>
         <div className="list-item__address">
           {street} <br />
@@ -28,6 +31,7 @@ const ListElement = ({ name, avatar, address, balance, created }) => {
 
 ListElement.propTypes = {
   name: PropTypes.string,
+  email: PropTypes.string,
   avatar: PropTypes.string,
   address: PropTypes.shape({
     street: PropTypes.string,
